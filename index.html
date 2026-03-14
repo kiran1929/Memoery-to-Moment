@@ -8,10 +8,10 @@
   <!-- Bootstrap 5.3 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   
-  <!-- Poppins Font -->
+  <!-- Premium Fonts (Bodoni Moda & Jost) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
@@ -31,13 +31,6 @@
         <a href="#how-it-works" class="nav-link fw-medium text-secondary">How it Works</a>
         <a href="#pricing" class="nav-link fw-medium text-secondary">Pricing</a>
         <a href="#features" class="nav-link fw-medium text-secondary">Why Us</a>
-        <span class="vr mx-2 opacity-25"></span>
-        <a href="#" class="nav-link fw-medium text-secondary small text-uppercase letter-spacing-sm" data-nav-view="user">
-          Client Dashboard
-        </a>
-        <a href="#" class="nav-link fw-medium text-secondary small text-uppercase letter-spacing-sm d-flex align-items-center gap-1" data-nav-view="admin">
-          <i class="bi bi-shield-lock"></i><span>Admin</span>
-        </a>
       </div>
       <a class="btn btn-dark rounded-pill px-4 py-2 fw-medium shadow-sm hover-lift" href="#momentForm" data-nav-view="landing">
         Craft My Moment
@@ -184,50 +177,184 @@
     </div>
   </section>
 
-  <!-- FEATURES SPLIT -->
+  <!-- SERVICES / FEATURES -->
   <section id="features" class="py-6 bg-dark text-white">
     <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-5">
-          <span class="badge bg-white text-dark rounded-pill px-3 py-2 fw-medium mb-3">The M2M Advantage</span>
-          <h2 class="display-6 fw-bold mb-4">Crafted locally,<br/>delivered perfectly.</h2>
-          <p class="text-white-50 fs-5 mb-0">We don't outsource our core planning. Our in-house experts and strict local partnerships ensure you get 5-star treatment every time.</p>
-        </div>
-        <div class="col-lg-7">
-          <div class="row g-4">
+
+      <!-- Header -->
+      <div class="text-center mb-5">
+        <span class="badge bg-white text-dark rounded-pill px-3 py-2 fw-medium mb-3">What We Actually Do</span>
+        <h2 class="display-6 fw-bold mb-3">Three pillars.<br/>One unforgettable moment.</h2>
+        <p class="text-white-50 fs-5 mx-auto" style="max-width:600px;">We handle the plan, the people, and the proof — so you just walk in and take all the credit.</p>
+      </div>
+
+      <!-- Pill Tabs -->
+      <ul class="nav nav-pills justify-content-center gap-2 mb-4 flex-wrap" id="serviceTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active px-4 py-2 fw-semibold rounded-pill" id="tab-planner" data-bs-toggle="tab" data-bs-target="#pane-planner" type="button" role="tab">
+            ⭐ The Surprise Planner
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link px-4 py-2 fw-semibold rounded-pill" id="tab-memory" data-bs-toggle="tab" data-bs-target="#pane-memory" type="button" role="tab">
+            📷 The Memory Maker
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link px-4 py-2 fw-semibold rounded-pill" id="tab-fulfillment" data-bs-toggle="tab" data-bs-target="#pane-fulfillment" type="button" role="tab">
+            ✅ Event Fulfillment
+          </button>
+        </li>
+      </ul>
+
+      <!-- Tab Content Panel -->
+      <div class="tab-content bg-white bg-opacity-10 rounded-4 border border-light border-opacity-25 p-4 p-md-5">
+
+        <!-- PANE 1: The Surprise Planner -->
+        <div class="tab-pane fade show active" id="pane-planner" role="tabpanel">
+          <div class="mb-4">
+            <h3 class="h5 fw-bold mb-1">The Surprise Planner</h3>
+            <p class="text-white-50 small mb-0">The conceptualization and styling phase — we build the idea and run the full setup so the surprise lands perfectly.</p>
+          </div>
+          <div class="row g-3">
             <div class="col-md-6">
-              <div class="bg-white bg-opacity-10 p-4 rounded-4 h-100 border border-light border-opacity-25 hover-lift">
-                <i class="bi bi-gem fs-2 text-accent mb-3 d-block"></i>
-                <h4 class="h5 fw-bold">Local Artisans</h4>
-                <p class="text-white-50 mb-0 small">Handpicked venues, floral designers, and prop makers.</p>
+              <div class="bg-white bg-opacity-10 rounded-3 p-3 h-100">
+                <div class="fw-semibold mb-2">💍 Romantic Milestones</div>
+                <ul class="text-white-50 small mb-0 ps-3">
+                  <li class="mb-2"><strong class="text-white">"Flash" Proposals</strong> — Orchestrating a sudden flash mob, choir, or candlelit setup at a restaurant to pop the question in style.</li>
+                  <li><strong class="text-white">Private Dining Transformations</strong> — Turning an ordinary rooftop or backyard into a luxury, candle-lit dinner experience.</li>
+                </ul>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="bg-white bg-opacity-10 p-4 rounded-4 h-100 border border-light border-opacity-25 hover-lift">
-                <i class="bi bi-stopwatch fs-2 text-primary mb-3 d-block"></i>
-                <h4 class="h5 fw-bold">24H Delivery</h4>
-                <p class="text-white-50 mb-0 small">Sneak-peak media sent directly to you within 24 hours.</p>
+              <div class="bg-white bg-opacity-10 rounded-3 p-3 h-100">
+                <div class="fw-semibold mb-2">🎂 Family &amp; Friends</div>
+                <ul class="text-white-50 small mb-0 ps-3">
+                  <li class="mb-2"><strong class="text-white">"Midnight Ambush" Birthdays</strong> — Decorating a room, office, or cubicle before the person arrives, turning the ordinary into the extraordinary.</li>
+                  <li><strong class="text-white">Nostalgia Drops</strong> — Tracking down childhood friends and coordinating their surprise appearance at an event for maximum emotional impact.</li>
+                </ul>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="bg-white bg-opacity-10 p-4 rounded-4 h-100 border border-light border-opacity-25 hover-lift">
-                <i class="bi bi-film fs-2 text-success mb-3 d-block"></i>
-                <h4 class="h5 fw-bold">Pro Media</h4>
-                <p class="text-white-50 mb-0 small">Clean edits, color grading, and organized safe cloud storage.</p>
+              <div class="bg-white bg-opacity-10 rounded-3 p-3 h-100">
+                <div class="fw-semibold mb-2">🏢 Corporate / Workplace</div>
+                <ul class="text-white-50 small mb-0 ps-3">
+                  <li class="mb-2"><strong class="text-white">Promotion Celebrations</strong> — Surprising an employee with a tailored desk makeover and a premium gift hamper to honour the milestone.</li>
+                  <li><strong class="text-white">Welcome-back &amp; Farewell Gestures</strong> — Marking big career transitions in a way the team will never forget.</li>
+                </ul>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="bg-white bg-opacity-10 p-4 rounded-4 h-100 border border-light border-opacity-25 hover-lift">
-                <i class="bi bi-geo-alt fs-2 text-warning mb-3 d-block"></i>
-                <h4 class="h5 fw-bold">Bengaluru Based</h4>
-                <p class="text-white-50 mb-0 small">Deep knowledge of traffic pacing, weather grids, and local spots.</p>
+              <div class="bg-white bg-opacity-10 rounded-3 p-3 h-100">
+                <div class="fw-semibold mb-2">🕊️ Apology &amp; Reconciliation</div>
+                <p class="text-white-50 small mb-0">Curated <strong class="text-white">"I'm Sorry" experiences</strong> — featuring live acoustic musicians, personalized art installations, or meaningful gestures delivered directly and discreetly to the person.</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
+
+        <!-- PANE 2: The Memory Maker -->
+        <div class="tab-pane fade" id="pane-memory" role="tabpanel">
+          <div class="mb-4">
+            <h3 class="h5 fw-bold mb-1">The Memory Maker</h3>
+            <p class="text-white-50 small mb-0">Our photo and video arm — split into two modes based on the scale of your event.</p>
+          </div>
+
+          <!-- Part A -->
+          <div class="mb-4">
+            <div class="d-flex align-items-center gap-2 mb-3">
+              <span class="badge bg-success-subtle text-success rounded-pill px-3">A · Instant Services</span>
+              <span class="text-white-50 small">For short, high-impact events</span>
+            </div>
+            <div class="row g-3">
+              <div class="col-md-4">
+                <div class="bg-white bg-opacity-10 rounded-3 p-3 h-100">
+                  <div class="fw-semibold mb-1">📸 The "Paparazzi" Capture</div>
+                  <p class="text-white-50 small mb-0">A hidden photographer booked for 30–60 minutes captures the exact raw moment — the gasp, the tears — from the bushes or across the street.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="bg-white bg-opacity-10 rounded-3 p-3 h-100">
+                  <div class="fw-semibold mb-1">🎬 On-the-Spot Reel Creators</div>
+                  <p class="text-white-50 small mb-0">A videographer shoots on mobile, edits with trending music, and hands over a 30-second social-media-ready vertical reel within one hour.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="bg-white bg-opacity-10 rounded-3 p-3 h-100">
+                  <div class="fw-semibold mb-1">📷 Polaroid / Instant Print Drops</div>
+                  <p class="text-white-50 small mb-0">A photographer snaps the surprise moment and instantly hands the couple or family a stack of physical Polaroid photos before leaving.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Part B -->
+          <div>
+            <div class="d-flex align-items-center gap-2 mb-3">
+              <span class="badge bg-warning-subtle text-warning rounded-pill px-3">B · Long Event Services</span>
+              <span class="text-white-50 small">For multi-day events</span>
+            </div>
+            <div class="row g-3">
+              <div class="col-md-4">
+                <div class="bg-white bg-opacity-10 rounded-3 p-3 h-100">
+                  <div class="fw-semibold mb-1">🎥 Documentary-Style Follows</div>
+                  <p class="text-white-50 small mb-0">A crew shadows a family or group for an entire weekend trip or 2-day celebration, capturing the behind-the-scenes buildup and the main event.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="bg-white bg-opacity-10 rounded-3 p-3 h-100">
+                  <div class="fw-semibold mb-1">🚁 Cinematic After-Movies</div>
+                  <p class="text-white-50 small mb-0">High-end production with drone footage, multi-camera setups, and professional lighting — crafted for large-scale milestone events.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="bg-white bg-opacity-10 rounded-3 p-3 h-100">
+                  <div class="fw-semibold mb-1">📖 Coffee Table Book Curation</div>
+                  <p class="text-white-50 small mb-0">We don't just shoot — we physically print, bind, and deliver a premium hard-cover photo album weeks later as a permanent keepsake.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANE 3: Event Fulfillment -->
+        <div class="tab-pane fade" id="pane-fulfillment" role="tabpanel">
+          <div class="mb-4">
+            <h3 class="h5 fw-bold mb-1">Event Fulfillment</h3>
+            <p class="text-white-50 small mb-0">The "Done-For-You" execution — we combine the Planner, the Memory Maker, and real on-ground heavy lifting so the client doesn't have to lift a single finger.</p>
+          </div>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="bg-white bg-opacity-10 rounded-3 p-3 h-100">
+                <div class="fw-semibold mb-1">📍 Venue &amp; Logistics Scouting</div>
+                <p class="text-white-50 small mb-0">We secure permits for public proposals, book private dining rooms, and organize luxury transport — like a vintage car or premium chauffeur — to get the person to the location without them suspecting a thing.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="bg-white bg-opacity-10 rounded-3 p-3 h-100">
+                <div class="fw-semibold mb-1">🌸 Local Artisan Sourcing</div>
+                <p class="text-white-50 small mb-0">We book the independent local baker for the custom cake, the freelance florist for rare flowers, and the indie musician — ensuring the client gets unique, non-commercial goods sourced directly from Bengaluru's best.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="bg-white bg-opacity-10 rounded-3 p-3 h-100">
+                <div class="fw-semibold mb-1">🕵️ The "Shadow" Coordinator</div>
+                <p class="text-white-50 small mb-0">A real person acts as the invisible stage manager on the day — hiding at the venue, sending "Are you 5 minutes away?" texts, cueing the musician to start, and signalling the hidden photographer. The client feels zero stress.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="bg-white bg-opacity-10 rounded-3 p-3 h-100">
+                <div class="fw-semibold mb-1">🥂 Premium White-Glove Orchestration</div>
+                <p class="text-white-50 small mb-0">Our highest-ticket tier for high-net-worth clients — end-to-end luxury including private helicopter bookings, yacht rentals, or exclusive venue takeovers, all orchestrated alongside the surprise and memory capture.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end tab-content -->
     </div>
   </section>
+
 
   <!-- FORM SECTION -->
   <section id="momentForm" class="py-6 bg-light">
