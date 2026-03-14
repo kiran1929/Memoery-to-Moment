@@ -1,0 +1,94 @@
+:root {
+  --primary: #4F46E5;
+  --secondary: #6B7280;
+  --accent: #EC4899;
+  --dark: #111827;
+  --light: #F9FAFB;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, sans-serif;
+  color: var(--dark);
+  background-color: var(--light);
+}
+
+/* Utilities */
+.py-6 { padding-top: 5rem; padding-bottom: 5rem; }
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.hover-lift:hover { transform: translateY(-3px); }
+
+/* Glass Navbar */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Premium Hero */
+.hero-section {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.hero-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.15;
+  z-index: 0;
+}
+.hero-glow.bg-primary { top: -100px; left: -100px; }
+.hero-glow.bg-accent { bottom: -100px; right: -100px; }
+.hero-title { letter-spacing: -0.03em; line-height: 1.1; }
+
+/* Cards */
+.premium-card {
+  transition: all 0.3s ease;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+.premium-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+.icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+}
+
+/* Pricing focus */
+.pricing-card { border-radius: 1.5rem; transition: transform 0.3s ease; }
+.pricing-card:hover { transform: translateY(-5px); }
+.pricing-focus {
+  background: linear-gradient(135deg, var(--dark), #1f2937);
+  transform: scale(1.05);
+  z-index: 1;
+}
+.pricing-focus:hover { transform: scale(1.05) translateY(-5px); }
+
+/* Form overrides */
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary) !important;
+  box-shadow: none !important;
+  outline: 2px solid rgba(79, 70, 229, 0.2);
+}
+
+@media(max-width: 768px) {
+  .hero-section { text-align: center; }
+  .pricing-focus { transform: scale(1); }
+  .pricing-focus:hover { transform: translateY(-5px); }
+}
