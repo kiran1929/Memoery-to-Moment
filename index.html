@@ -23,20 +23,30 @@
   <!-- GLASSMORPHISM NAVBAR -->
   <nav class="navbar navbar-expand-lg fixed-top glass-nav py-3">
     <div class="container d-flex justify-content-between align-items-center">
-      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-dark" href="#">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-dark" href="#" data-nav-view="landing">
         <i class="bi bi-stars text-primary fs-4"></i>
         <span>Memory to Moment</span>
       </a>
-      <div class="d-none d-md-flex gap-4">
+      <div class="d-none d-md-flex align-items-center gap-4">
         <a href="#how-it-works" class="nav-link fw-medium text-secondary">How it Works</a>
         <a href="#pricing" class="nav-link fw-medium text-secondary">Pricing</a>
         <a href="#features" class="nav-link fw-medium text-secondary">Why Us</a>
+        <span class="vr mx-2 opacity-25"></span>
+        <a href="#" class="nav-link fw-medium text-secondary small text-uppercase letter-spacing-sm" data-nav-view="user">
+          Client Dashboard
+        </a>
+        <a href="#" class="nav-link fw-medium text-secondary small text-uppercase letter-spacing-sm d-flex align-items-center gap-1" data-nav-view="admin">
+          <i class="bi bi-shield-lock"></i><span>Admin</span>
+        </a>
       </div>
-      <a class="btn btn-dark rounded-pill px-4 py-2 fw-medium shadow-sm hover-lift" href="#momentForm">
+      <a class="btn btn-dark rounded-pill px-4 py-2 fw-medium shadow-sm hover-lift" href="#momentForm" data-nav-view="landing">
         Craft My Moment
       </a>
     </div>
   </nav>
+
+  <!-- LANDING EXPERIENCE (DEFAULT VIEW) -->
+  <main id="landingView" data-view="landing">
 
   <!-- PREMIUM HERO SECTION -->
   <header class="hero-section d-flex align-items-center">
@@ -112,8 +122,8 @@
   <section id="pricing" class="py-6 position-relative">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 class="fw-bold display-6 mb-3">Transparent Tiers</h2>
-        <p class="text-secondary fs-5">No hidden fees. Select a foundation, and we build from there.</p>
+        <h2 class="fw-bold display-6 mb-3">Simple, reasonable pricing.</h2>
+        <p class="text-secondary fs-5">Thoughtful surprises that feel premium, at everyday-friendly prices.</p>
       </div>
       
       <div class="row g-4 align-items-center mt-3">
@@ -122,7 +132,7 @@
           <div class="card pricing-card text-center p-4 border-0 bg-white">
             <h3 class="h5 fw-bold text-secondary">SPARK</h3>
             <div class="my-4">
-              <span class="fs-1 fw-bold">₹15K</span>
+              <span class="fs-1 fw-bold">₹4,999</span>
             </div>
             <ul class="list-unstyled text-start text-secondary d-flex flex-column gap-3 mb-5">
               <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Fast planning & setup</li>
@@ -142,7 +152,7 @@
             </div>
             <h3 class="h5 fw-bold text-white-50 mt-3">FORGE</h3>
             <div class="my-4">
-              <span class="fs-1 fw-bold">₹40K</span>
+              <span class="fs-1 fw-bold">₹14,999</span>
             </div>
             <ul class="list-unstyled text-start d-flex flex-column gap-3 mb-5">
               <li><i class="bi bi-check-circle-fill text-light me-2"></i> Full event planning</li>
@@ -159,7 +169,7 @@
           <div class="card pricing-card text-center p-4 border-0 bg-white">
             <h3 class="h5 fw-bold text-secondary">EPIC</h3>
             <div class="my-4">
-              <span class="fs-1 fw-bold">₹1L+</span>
+              <span class="fs-1 fw-bold">₹49,999</span>
             </div>
             <ul class="list-unstyled text-start text-secondary d-flex flex-column gap-3 mb-5">
               <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Luxury experience</li>
@@ -274,9 +284,9 @@
                       <label class="form-label text-secondary small fw-bold text-uppercase">Est. Budget</label>
                       <select name="budget" class="form-select form-select-lg bg-light border-0" required>
                         <option value="" selected disabled>Select...</option>
-                        <option>₹15K (Spark)</option>
-                        <option>₹40K (Forge)</option>
-                        <option>₹1L+ (Epic)</option>
+                        <option>₹4,999 (Spark)</option>
+                        <option>₹14,999 (Forge)</option>
+                        <option>₹49,999 (Epic)</option>
                       </select>
                     </div>
 
@@ -303,7 +313,7 @@
     <div class="container">
       <div class="row g-4 mb-5">
         <div class="col-lg-4">
-          <a class="d-flex align-items-center gap-2 fw-bold text-dark text-decoration-none fs-5 mb-3" href="#">
+          <a class="d-flex align-items-center gap-2 fw-bold text-dark text-decoration-none fs-5 mb-3" href="#" data-nav-view="landing">
             <i class="bi bi-stars text-primary"></i> Memory to Moment
           </a>
           <p class="text-secondary small pe-5">Premium surprise architects and storytellers based in Bengaluru. Transforming your wildest ideas into permanent, beautiful memories.</p>
@@ -345,6 +355,381 @@
       </div>
     </div>
   </footer>
+
+  </main>
+
+  <!-- USER DASHBOARD -->
+  <section id="userDashboard" data-view="user" class="py-6 dashboard-section d-none">
+    <div class="container position-relative">
+      <div class="dashboard-glow dashboard-glow-primary"></div>
+      <div class="dashboard-glow dashboard-glow-accent"></div>
+
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
+        <div>
+          <span class="badge rounded-pill bg-white text-dark fw-semibold mb-2">Client View</span>
+          <h2 class="fw-bold text-white mb-1">Your Surprises, At a Glance</h2>
+          <p class="text-white-50 mb-0 small">Track planning, execution, and memories from one calm command center.</p>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn btn-sm btn-outline-light rounded-pill px-3 active" type="button">All Moments</button>
+          <button class="btn btn-sm btn-outline-light rounded-pill px-3" type="button">Upcoming</button>
+          <button class="btn btn-sm btn-outline-light rounded-pill px-3" type="button">In Production</button>
+          <button class="btn btn-sm btn-outline-light rounded-pill px-3" type="button">Memories Library</button>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-4">
+        <div class="col-md-4">
+          <div class="dashboard-card h-100">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="text-white-50 small text-uppercase fw-semibold">Next Surprise</span>
+              <span class="badge bg-success-subtle text-success small">On Track</span>
+            </div>
+            <h3 class="h5 text-white mb-1">Anniversary Rooftop Dinner</h3>
+            <p class="text-white-50 small mb-3">Koramangala, Bengaluru • Romantic Milestone</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <span class="text-white-50 small d-block">Date</span>
+                <span class="text-white fw-semibold">24 Mar · 7:30 PM</span>
+              </div>
+              <div class="text-end">
+                <span class="text-white-50 small d-block">Stage</span>
+                <span class="text-white fw-semibold">Planner → Fulfillment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="dashboard-card h-100">
+            <span class="text-white-50 small text-uppercase fw-semibold d-block mb-2">Memory Vault</span>
+            <h3 class="h5 text-white mb-1">3 Live Galleries</h3>
+            <p class="text-white-50 small mb-3">View edited photos, reels, and coffee table layouts.</p>
+            <ul class="list-unstyled text-white-50 small mb-0">
+              <li class="mb-1"><i class="bi bi-play-circle text-accent me-2"></i> "Midnight Ambush" Birthday · 0:32 Reel</li>
+              <li class="mb-1"><i class="bi bi-images text-primary me-2"></i> Promotion Celebration · 57 Photos</li>
+              <li><i class="bi bi-book text-success me-2"></i> Family Nostalgia Weekend · Album at Print Lab</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="dashboard-card h-100">
+            <span class="text-white-50 small text-uppercase fw-semibold d-block mb-2">Concierge Line</span>
+            <p class="text-white-50 small mb-3">Your dedicated coordinator keeps everything invisible but under control.</p>
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="avatar-circle">
+                <span>M</span>
+              </div>
+              <div>
+                <div class="text-white fw-semibold small">Mahima · Shadow Coordinator</div>
+                <div class="text-success small d-flex align-items-center gap-1">
+                  <span class="status-dot status-dot-live"></span>
+                  Live on WhatsApp
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-light btn-sm rounded-pill w-100 fw-semibold d-flex justify-content-center align-items-center gap-2">
+              <i class="bi bi-whatsapp"></i> Nudge Coordinator
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-7">
+          <div class="dashboard-card h-100">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="h6 text-white mb-0">Journey Timeline</h3>
+              <span class="text-white-50 small">Today → Surprise Day</span>
+            </div>
+            <div class="timeline">
+              <div class="timeline-item completed">
+                <div class="timeline-dot"></div>
+                <div>
+                  <div class="text-white small fw-semibold">Vision Lock-In</div>
+                  <div class="text-white-50 small">Call completed · Moodboard approved</div>
+                </div>
+              </div>
+              <div class="timeline-item completed">
+                <div class="timeline-dot"></div>
+                <div>
+                  <div class="text-white small fw-semibold">Vendors Confirmed</div>
+                  <div class="text-white-50 small">Florist, musician, and photographer locked.</div>
+                </div>
+              </div>
+              <div class="timeline-item active">
+                <div class="timeline-dot"></div>
+                <div>
+                  <div class="text-white small fw-semibold">Run of Show</div>
+                  <div class="text-white-50 small">Shadow coordinator building final minute-by-minute plan.</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div>
+                  <div class="text-white small fw-semibold">Surprise & Capture</div>
+                  <div class="text-white-50 small">You arrive, we orchestrate, cameras roll.</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div>
+                  <div class="text-white small fw-semibold">Delivery & Archive</div>
+                  <div class="text-white-50 small">Reels in 24H, long-form edits and albums in phases.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="dashboard-card h-100">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="h6 text-white mb-0">Bookings Snapshot</h3>
+              <span class="text-white-50 small">Last 12 months</span>
+            </div>
+            <div class="row text-white-50 small mb-3">
+              <div class="col-4">
+                <div class="text-uppercase fw-semibold small mb-1">Romantic</div>
+                <div class="fs-5 text-white fw-semibold">7</div>
+              </div>
+              <div class="col-4">
+                <div class="text-uppercase fw-semibold small mb-1">Family</div>
+                <div class="fs-5 text-white fw-semibold">4</div>
+              </div>
+              <div class="col-4">
+                <div class="text-uppercase fw-semibold small mb-1">Corporate</div>
+                <div class="fs-5 text-white fw-semibold">2</div>
+              </div>
+            </div>
+            <div class="small text-white-50">You're in the top 8% of clients who turn surprises into a ritual. Your next story is already in motion.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTH OVERLAY -->
+  <section id="authSection" class="py-6 auth-section d-none" data-view="auth">
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+      <div class="card shadow-lg border-0 rounded-5 auth-card p-4 p-md-5">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-6 border-end d-none d-md-block">
+            <span class="badge bg-primary-subtle text-primary rounded-pill fw-semibold mb-3">Secure Access</span>
+            <h2 class="fw-bold mb-3">Sign in to your cockpit.</h2>
+            <p class="text-secondary mb-4 small">
+              Admins see pipelines, crews, and revenue. Clients see their surprise journey and memory vault.
+            </p>
+            <ul class="list-unstyled small text-secondary mb-0">
+              <li class="mb-2"><i class="bi bi-shield-check me-2 text-primary"></i>Encrypted browser session only</li>
+              <li class="mb-2"><i class="bi bi-eye-slash me-2 text-primary"></i>Guests can’t see backstage</li>
+              <li><i class="bi bi-stars me-2 text-primary"></i>Switch between client and admin modes</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h3 class="h5 fw-bold mb-3">Log in</h3>
+            <form id="authForm" class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label class="form-label small text-uppercase fw-semibold text-secondary">Email</label>
+                <input type="email" class="form-control form-control-lg bg-light border-0" id="authEmail" placeholder="you@mtm.com" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label small text-uppercase fw-semibold text-secondary">Password</label>
+                <input type="password" class="form-control form-control-lg bg-light border-0" id="authPassword" placeholder="••••••••" required />
+              </div>
+              <div class="mb-3 small text-secondary">
+                <div>Demo logins:</div>
+                <div class="mt-1">
+                  <span class="fw-semibold">Admin</span>: admin@mtm.com / admin@123<br/>
+                  <span class="fw-semibold">User</span>: user@mtm.com / user@123
+                </div>
+              </div>
+              <div class="d-grid gap-2 mt-3">
+                <button type="submit" class="btn btn-dark btn-lg rounded-pill fw-bold">Continue</button>
+                <button type="button" class="btn btn-outline-secondary btn-sm rounded-pill" id="authBackToSite">
+                  Back to Experience
+                </button>
+              </div>
+              <div id="authError" class="text-danger small mt-3 d-none">
+                Incorrect email or password. Please use the demo credentials shown above.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADMIN DASHBOARD -->
+  <section id="adminDashboard" data-view="admin" class="py-6 admin-section d-none">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
+        <div>
+          <span class="badge rounded-pill bg-primary-subtle text-primary fw-semibold mb-2">Admin Command</span>
+          <h2 class="fw-bold mb-1">Crew, Pipelines & Revenue</h2>
+          <p class="text-secondary mb-0 small">Operational cockpit for planners, memory makers, and on-ground fulfillment.</p>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn btn-sm btn-outline-dark rounded-pill px-3 active" type="button">Today</button>
+          <button class="btn btn-sm btn-outline-dark rounded-pill px-3" type="button">This Week</button>
+          <button class="btn btn-sm btn-outline-dark rounded-pill px-3" type="button">This Quarter</button>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-4">
+        <div class="col-md-3">
+          <div class="admin-card h-100">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="text-secondary small text-uppercase fw-semibold">Active Pipelines</span>
+              <i class="bi bi-diagram-3 text-primary"></i>
+            </div>
+            <div class="fs-4 fw-bold">18</div>
+            <div class="text-success small d-flex align-items-center gap-1">
+              <i class="bi bi-arrow-up-right"></i> 4 new today
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="admin-card h-100">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="text-secondary small text-uppercase fw-semibold">Projected Revenue</span>
+              <i class="bi bi-currency-rupee text-accent"></i>
+            </div>
+            <div class="fs-4 fw-bold">₹8.6L</div>
+            <div class="text-secondary small">Next 45 days</div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="admin-card h-100">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="text-secondary small text-uppercase fw-semibold">Capture Queue</span>
+              <i class="bi bi-camera-reels text-success"></i>
+            </div>
+            <div class="fs-4 fw-bold">6</div>
+            <div class="text-secondary small">Edits due this week</div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="admin-card h-100">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="text-secondary small text-uppercase fw-semibold">NPS</span>
+              <i class="bi bi-emoji-smile text-warning"></i>
+            </div>
+            <div class="fs-4 fw-bold">9.6</div>
+            <div class="text-success small d-flex align-items-center gap-1">
+              <span class="status-dot status-dot-live"></span> Last 30 surveys
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="admin-card h-100">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="h6 mb-0">Pipeline Overview</h3>
+              <span class="text-secondary small">Planner → Memory Maker → Fulfillment</span>
+            </div>
+            <div class="row g-3">
+              <div class="col-md-4">
+                <div class="pipeline-pill bg-primary-subtle text-primary">
+                  <div class="small text-uppercase fw-semibold mb-1">Planner</div>
+                  <div class="h5 mb-0">7</div>
+                  <div class="small">New briefs & concept sprints</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="pipeline-pill bg-accent-subtle text-accent">
+                  <div class="small text-uppercase fw-semibold mb-1">Memory Maker</div>
+                  <div class="h5 mb-0">5</div>
+                  <div class="small">Shoots & post-production</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="pipeline-pill bg-success-subtle text-success">
+                  <div class="small text-uppercase fw-semibold mb-1">Fulfillment</div>
+                  <div class="h5 mb-0">6</div>
+                  <div class="small">On-ground logistics & delivery</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="admin-card h-100">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="h6 mb-0">Today’s Crew Call Sheet</h3>
+              <span class="text-secondary small">3 active events</span>
+            </div>
+            <ul class="list-unstyled small mb-0">
+              <li class="mb-2 d-flex justify-content-between">
+                <div>
+                  <div class="fw-semibold">Beach Proposal · EPIC</div>
+                  <div class="text-secondary">Shadow: Neeraj · Photographer: Anu · Reel: Kiran</div>
+                </div>
+                <span class="badge bg-success-subtle text-success">Tonight</span>
+              </li>
+              <li class="mb-2 d-flex justify-content-between">
+                <div>
+                  <div class="fw-semibold">Corporate Promotion Wall</div>
+                  <div class="text-secondary">Shadow: Mahima · Decor: Local Bloom Co.</div>
+                </div>
+                <span class="badge bg-warning-subtle text-warning">In Setup</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <div>
+                  <div class="fw-semibold">Family Nostalgia Weekend</div>
+                  <div class="text-secondary">Crew: 2x cam, 1x doc lead</div>
+                </div>
+                <span class="badge bg-primary-subtle text-primary">Day 2</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="admin-card mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h3 class="h6 mb-0">Latest Leads</h3>
+          <span class="text-secondary small">Captured via "Build My Moment" form</span>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-sm align-middle mb-0">
+            <thead>
+              <tr class="small text-secondary">
+                <th scope="col">Client</th>
+                <th scope="col">Type</th>
+                <th scope="col">Budget</th>
+                <th scope="col">Status</th>
+                <th scope="col">Coordinator</th>
+              </tr>
+            </thead>
+            <tbody class="small">
+              <tr>
+                <td>Rohit · 9XXXXXXXX1</td>
+                <td>Romantic · Flash Proposal</td>
+                <td>₹14,999 (Forge)</td>
+                <td><span class="badge bg-primary-subtle text-primary">Discovery Call</span></td>
+                <td>Mahima</td>
+              </tr>
+              <tr>
+                <td>Ananya · 9XXXXXXXX7</td>
+                <td>Family · Midnight Ambush</td>
+                <td>₹4,999 (Spark)</td>
+                <td><span class="badge bg-success-subtle text-success">Locked</span></td>
+                <td>Neeraj</td>
+              </tr>
+              <tr>
+                <td>Corporate HR · 9XXXXXXXX3</td>
+                <td>Corporate · Promotion Celebration</td>
+                <td>₹49,999 (Epic)</td>
+                <td><span class="badge bg-warning-subtle text-warning">Proposal Sent</span></td>
+                <td>Kiran</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="src/js/script.js" defer></script>
